@@ -1,10 +1,9 @@
 // @TODO: YOUR CODE HERE!
 
-// Define SVG area dimensions
+
 var svgWidth = 1000;
 var svgHeight = 800;
 
-// Define the chart's margins as an object
 var margin = {
   top: 30,
   right: 30,
@@ -12,7 +11,7 @@ var margin = {
   left: 30
 };
 var padding = 20;
-// Define dimensions of the chart area
+
 var width = svgWidth - (margin.left - margin.right);
 var height = svgHeight - (margin.top - margin.bottom);
 var formatPercent = d3.format('.2%');
@@ -32,7 +31,7 @@ d3.select(".chart")
   .append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);
-//Import Data
+
 d3.csv("assets/data/data.csv", function(error, data) {
   for (var i = 0, i < data.length, i++) {
     console.log(data[i].abbr)
